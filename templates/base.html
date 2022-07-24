@@ -16,21 +16,20 @@
 
     {% block corecss %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" href="#">
     {% endblock %}
 
     {% block extra_css %}
     <style>
-        html {
-            font-family: 'Libre Bodoni', serif !important;
-
-        }
-
         body {
-            background-image: url('media/images/frontimg.png');
-            background-size: initial;
+            font-family: 'Playfair Display', serif;
+            color: antiquewhite;
+            background-image: url('media/macrame.png');
+            background-size: contain;
 
         }
 
@@ -43,7 +42,8 @@
 * Custom translucent site header
 */
 
-        .site-header {
+        .site-header,
+        .hero-text {
             background-color: rgba(174, 97, 9, 0.577);
             -webkit-backdrop-filter: saturate(180%) blur(20px);
             backdrop-filter: saturate(180%) blur(20px);
@@ -55,7 +55,7 @@
         }
 
         .site-header a:hover {
-            color: rgb(241, 235, 234);
+            color: rgb(151, 107, 80);
             text-decoration: none;
         }
 
@@ -107,7 +107,7 @@
 
     {% block page_header %}
     {% endblock %}
-    <nav class="navbar navbar-expand-lg bg-transparent site-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent site-header">
         <a class="navbar-brand" href="{% url 'home' %}">
             <img src="/media/logo-stairs-moon-cact.png" style="height: 6rem; width: 6rem;" class="rounded-circle" alt="logo of creator">
             Macrame Online Shop
@@ -135,8 +135,8 @@
             </form>
         </div>
     </nav>
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-transparent">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <div class="position-relative overflow-hidden p-2 p-md-5 m-md-3 text-center">
+        <div class="col-md-5 p-lg-5 mx-auto my-5 hero-text rounded bg-transparent">
             <h1 class="display-4 font-weight-normal">Handmade Macrames</h1>
             <p class="lead font-weight-normal">A handmade products made with Irish Cotton string and with Irish wood from forests all over Ireland</p>
             <a class="btn btn-outline-secondary" href="#">Start Shopping</a>
@@ -161,41 +161,6 @@
             <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
         </div>
     </div>
-
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-        <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
-                <h2 class="display-5">Another headline</h2>
-                <p class="lead">And an even wittier subheading.</p>
-            </div>
-            <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-        </div>
-        <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <div class="my-3 py-3">
-                <h2 class="display-5">Another headline</h2>
-                <p class="lead">And an even wittier subheading.</p>
-            </div>
-            <div class="bg-light shadow-sm mx-auto" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-        </div>
-    </div>
-
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-        <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
-                <h2 class="display-5">Another headline</h2>
-                <p class="lead">And an even wittier subheading.</p>
-            </div>
-            <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-        </div>
-        <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 py-3">
-                <h2 class="display-5">Another headline</h2>
-                <p class="lead">And an even wittier subheading.</p>
-            </div>
-            <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-        </div>
-    </div>
-
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
         <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-3 p-3">
@@ -230,8 +195,6 @@
                     <li><a class="text-muted" href="#">Random feature</a></li>
                     <li><a class="text-muted" href="#">Team feature</a></li>
                     <li><a class="text-muted" href="#">Stuff for developers</a></li>
-                    <li><a class="text-muted" href="#">Another one</a></li>
-                    <li><a class="text-muted" href="#">Last time</a></li>
                 </ul>
             </div>
             <div class="col-6 col-md">
@@ -239,7 +202,6 @@
                 <ul class="list-unstyled text-small">
                     <li><a class="text-muted" href="#">Resource</a></li>
                     <li><a class="text-muted" href="#">Resource name</a></li>
-                    <li><a class="text-muted" href="#">Another resource</a></li>
                     <li><a class="text-muted" href="#">Final resource</a></li>
                 </ul>
             </div>
@@ -248,8 +210,6 @@
                 <ul class="list-unstyled text-small">
                     <li><a class="text-muted" href="#">Business</a></li>
                     <li><a class="text-muted" href="#">Education</a></li>
-                    <li><a class="text-muted" href="#">Government</a></li>
-                    <li><a class="text-muted" href="#">Gaming</a></li>
                 </ul>
             </div>
             <div class="col-6 col-md">
