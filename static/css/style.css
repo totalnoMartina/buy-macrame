@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@1,600&display=swap');
 
 html {
-    font-family: 'Libre Bodoni', serif;
+    font-family: 'Libre Bodoni', serif !important;
 
 }
 
