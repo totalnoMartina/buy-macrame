@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     {% endblock %}
 
     {% block extra_meta %}
@@ -26,97 +27,22 @@
     {% endblock %}
 
     {% block corecss %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@1,600&display=swap" rel="stylesheet">
+
     {% endblock %}
 
     {% block extra_css %}
-    <style>
-        .container {
-            max-width: 960px;
-        }
-
-        /*
-    * Custom translucent site header
-    */
-
-        .site-header {
-            background-color: rgba(0, 0, 0, .85);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            backdrop-filter: saturate(180%) blur(20px);
-        }
-
-        .site-header a {
-            color: rgb(123, 113, 113);
-            transition: ease-in-out color .15s;
-        }
-
-        .site-header a:hover {
-            color: rgb(186, 153, 62);
-            text-decoration: none;
-        }
-
-        /*
-    * Dummy devices (replace them with your own or something else entirely!)
-    */
-
-        .product-device {
-            position: absolute;
-            right: 10%;
-            bottom: -30%;
-            width: 300px;
-            height: 540px;
-            background-color: rgba(192, 164, 50, 0.604);
-            border-radius: 21px;
-            -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
-        }
-
-        .product-device::before {
-            position: absolute;
-            top: 10%;
-            right: 10px;
-            bottom: 10%;
-            left: 10px;
-            content: "";
-            background-color: rgba(145, 87, 49, 0.68);
-            border-radius: 5px;
-        }
-
-        .product-device-2 {
-            top: -25%;
-            right: auto;
-            bottom: 0;
-            left: 5%;
-            background-color: #f1c9a3;
-        }
-
-
-        /*
-    * Extra utilities
-    */
-
-        .flex-equal>* {
-            -ms-flex: 1;
-            flex: 1;
-        }
-
-        @media (min-width: 768px) {
-            .flex-md-equal>* {
-                -ms-flex: 1;
-                flex: 1;
-            }
-        }
-
-        .overflow-hidden {
-            overflow: hidden;
-        }
-    </style>
     {% endblock %}
 
     {% block corejs %}
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/0ab8070b0e.js" crossorigin="anonymous"></script> -->
     {% endblock %}
 
     {% block extra_js %}
@@ -172,7 +98,7 @@
         </div>
     </nav>
 
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-transparent">
         <div class="col-md-5 p-lg-5 mx-auto my-5">
             <h1 class="display-4 font-weight-normal">Handmade Macrames</h1>
             <p class="lead font-weight-normal">A handmade products made with Irish Cotton string and with Irish wood from forests all over Ireland</p>
