@@ -2,5 +2,25 @@
 {% load static %}
 
 {% block content %}
-{{ products }}
+
+<div class="row row-cols-3 gap-4">
+    <div class="col-span-2 mx-auto">
+        <h2 class="font-medium leading-tight text-4xl mt-2 mb-4">Products
+        </h2>
+        {% for product in products %}
+        <div class="row">
+            <div class="col">{{product.name}}</div>
+            <div class="col">€{{product.price}}</div>
+            <div class="col">{{product.image}}</div>
+            <div class="w-100"></div>
+            {% endfor %}
+        </div>
+    </div>
+    <div>
+        <h2 class="font-medium leading-tight text-4xl mt-2 mb-4 mx-2">
+            Add Items
+
+        </h2>
+    </div>
+</div>
 {% endblock %}
