@@ -1,8 +1,4 @@
-body {
-    background-image: url('media/images/frontimg.png');
-    background-size: cover;
-
-}
+body {}
 
 .container {
     max-width: 960px;
