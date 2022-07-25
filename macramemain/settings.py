@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'mainapp',
     'django_extensions',
     'widget_tweaks',
+    "django_unicorn",  # required for Django to register urls and templatetags
+
 
 ]
 

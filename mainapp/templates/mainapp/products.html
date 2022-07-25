@@ -1,26 +1,34 @@
 {% extends "base.html" %}
 {% load static %}
+{% load unicorn %}
 
 {% block content %}
 
+{% unicorn 'shopmacrames' user=request.user.pk products=products %}
+<!-- 
 <div class="row row-cols-3 gap-4">
     <div class="col-span-2 mx-auto">
         <h2 class="font-medium leading-tight text-4xl mt-2 mb-4">Products
         </h2>
-        {% for product in products %}
         <div class="row">
-            <div class="col">{{product.name}}</div>
-            <div class="col">€{{product.price}}</div>
-            <div class="col">{{product.image}}</div>
-            <div class="w-100"></div>
-            {% endfor %}
+            {% for product in products %}
+            <a>
+
+                <img class="card-img-top img-fluid card__img h-50 w-50" src="{{ product.image.url }}" alt="{{ product.name }}">
+                <div class="col">{{product.name}}</div>
+                <div class="col">€{{product.price}}</div>
+                <button type="button" class="btn btn-light"> Add Item</button>
+
+                <div class="w-100"></div>
+                {% endfor %}
         </div>
+        </a>
     </div>
     <div>
         <h2 class="font-medium leading-tight text-4xl mt-2 mb-4 mx-2">
-            Add Items
+            Ordered Items
 
         </h2>
     </div>
-</div>
+</div> -->
 {% endblock %}

@@ -12,4 +12,4 @@ def product_view(request):
     context = {
         'products': products
     }
-    return render(request, 'mainapp/products.html', context)
+    return render(request, 'unicorn/shopmacrames.html', context)

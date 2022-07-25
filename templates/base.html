@@ -1,4 +1,5 @@
 {% load static %}
+{% load unicorn %}
 
 <!doctype html>
 <html lang="en">
@@ -94,11 +95,13 @@
 
     {% block extra_js %}
     {% endblock %}
-
     <title>Macrame Shop by Black Moon Design {% block extra_title %}{% endblock %}</title>
+    {% unicorn_scripts %}
+
 </head>
 
 <body>
+    {% csrf_token %}
     <header class="container-fluid fixed-top"></header>
 
     {% if messages %}
